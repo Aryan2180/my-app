@@ -1,12 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Sidebar from './Components/sidebar/Sidebar';
+import Header from './Components/header/Header';
 
-function App() {
+import './App.css';
+import './Form.css';
+import'./helper.css';
+import ServiceForm from './Components/form/ServiceForm';
+import { LeftArrow } from './Components/Icons';
+
+export default function App() {
   return (
-    <div className="App">
-     <>Navbar</>
+   
+    <div className="app">
+        <div className="sidebar-wrapper">
+    <Sidebar />
+    <div className="floating-icon">
+      <LeftArrow />
+    </div>
+  </div>
+      <div className="main">
+        <Header />
+        <div className="content">
+          <ServiceForm/>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
